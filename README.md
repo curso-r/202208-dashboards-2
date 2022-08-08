@@ -4,7 +4,7 @@
 ## Informações importantes
 
   - [Clique
-    aqui](https://github.com/curso-r/main-dashboards-2/raw/master/material_do_curso.zip)
+    aqui](https://github.com/curso-r/main-dashboards-2/raw/main/material_do_curso.zip)
     para baixar o material do curso.
 
   - Nosso blog: <https://curso-r.com/blog/>
