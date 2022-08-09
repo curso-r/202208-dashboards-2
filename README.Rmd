@@ -136,7 +136,7 @@ if(params$download_material == TRUE){
     "logo: assets/logo.png", '\n',
     "title: {params$nome_curso}", '\n',
     "show_downloads: true", '\n',
-    "link_material: 'https://github.com/curso-r/{params$main_repo}/raw/master/material_do_curso.zip'", '\n'
+    "link_material: 'https://github.com/curso-r/{params$main_repo}/raw/main/material_do_curso.zip'", '\n'
     
     ) %>%
     readr::write_lines( "_config.yml")
