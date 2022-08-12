@@ -34,6 +34,7 @@ Fora do horário de aula ou monitoria:
 | script                                                                                                       |
 |:-------------------------------------------------------------------------------------------------------------|
 | [01-modulos.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//01-modulos.zip) |
+| [02-golem.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//02-golem.zip)     |
 
 ## Redes sociais da Curso-R
 
