@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@0;1&display=swap');
+
+h1 {
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  border: 2px dotted purple;
+  border-radius: 10px;
+}
+
+p {
+  color: green;
+  font-family: 'Sofia', cursive;
+}
+
+span {
+  font-size: 19pt;
+}
+
+body {
+  background-color: beige;
+}
+
+.inversa {
+  color: white;
+  background-color: #985b5b;
+}
+
+#divVazia {
+  height: 100px;
+  background-color: orange;
+}
+
+p.paragrafo {
+  color: purple;
+}
+
+#imagem1 {
+  display: block;
+  margin: auto;
+}

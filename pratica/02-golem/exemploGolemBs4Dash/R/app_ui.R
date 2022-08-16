@@ -45,6 +45,14 @@ app_ui <- function(request) {
           bs4Dash::bs4TabItem(
             tabName = "reactable",
             mod_reactable_ui("reactable_ui_1")
+          ),
+          bs4Dash::bs4TabItem(
+            tabName = "plotly",
+            mod_plotly_ui("plotly_ui_1")
+          ),
+          bs4Dash::bs4TabItem(
+            tabName = "leaflet",
+            mod_leaflet_ui("leaflet_ui_1")
           )
         )
       )

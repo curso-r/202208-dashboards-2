@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_filtro_ui <- function(id) {
+mod_filtro_ui <- function(id, fazer_filtro_estado = FALSE) {
   ns <- NS(id)
   tagList(
     fluidRow(
@@ -23,6 +23,16 @@ mod_filtro_ui <- function(id) {
               choices = unique(sort(pnud$ano))
             )
           ),
+          if (fazer_filtro_estado) {
+            column(
+              width = 4,
+              selectInput(
+                inputId = ns("uf"),
+                label = "Selecione o estado",
+                choices = unique(sort(pnud$uf_sigla))
+              )
+            )
+          },
           column(
             width = 4,
             selectInput(
@@ -45,7 +55,7 @@ mod_filtro_server <- function(id){
     ns <- session$ns
 
     valores_do_filtro <- reactive({
-      list(ano = input$ano, metrica = input$metrica)
+      list(ano = input$ano, metrica = input$metrica, uf = input$uf)
     })
 
     return(valores_do_filtro)

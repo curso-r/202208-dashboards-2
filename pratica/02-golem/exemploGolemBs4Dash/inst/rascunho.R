@@ -117,8 +117,7 @@ ui <- dashboardPage(
             width = 6,
             plotly::plotlyOutput("grafico_plotly2")
           )
-        ),
-
+        )
       ),
       tabItem(
         tabName = "echarts",
@@ -312,7 +311,7 @@ server <- function(input, output, session) {
       leaflet::addMarkers(
         lng = ~lon,
         lat = ~lat,
-        label = ~muni_nm
+        label = ~muni_nm,
         popup = ~muni_nm
       )
 
