@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "get schwifty";
+  src: url("get_schwifty.ttf") format('truetype');
+}
+
+body {
+  background-image: url("universo.jpg");
+}
+
+.container-fluid {
+  margin-top: 30px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+#temporada-label {
+  color: white;
+}
+
+h1 {
+  font-family: "get schwifty";
+  font-size: 55pt;
+  color: #08acc6;
+  text-shadow: 4px 2px 6px #79b35a;
+}
+
+.rick_and_morty {
+  position: fixed;
+  bottom: 0;
+  left: -40px;
+  width: 400px;
+}
+
+.areaGrafico {
+  background-color: #0000006b;
+}

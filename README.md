@@ -33,11 +33,12 @@ Fora do horário de aula ou monitoria:
 
 ## Scripts utilizados em aula
 
-| script                                                                                                         |
-|:---------------------------------------------------------------------------------------------------------------|
-| [01-modulos.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//01-modulos.zip)   |
-| [02-golem.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//02-golem.zip)       |
-| [03-html-css.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//03-html-css.zip) |
+| script                                                                                                               |
+|:---------------------------------------------------------------------------------------------------------------------|
+| [01-modulos.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//01-modulos.zip)         |
+| [02-golem.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//02-golem.zip)             |
+| [03-html-css.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//03-html-css.zip)       |
+| [04-htmlwidgets.zip](https://raw.githubusercontent.com/curso-r/202208-dashboards-2/main/pratica//04-htmlwidgets.zip) |
 
 ## Redes sociais da Curso-R
 
