@@ -85,9 +85,6 @@ mod_reactable_server <- function(id){
     output$mapa <- leaflet::renderLeaflet({
       linhas_selecionadas <- reactable::getReactableState("tabela", "selected")
 
-      print("rodei o mapa")
-
-
       if (is.null(linhas_selecionadas)) {
         NULL
       } else {

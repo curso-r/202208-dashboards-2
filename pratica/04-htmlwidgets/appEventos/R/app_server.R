@@ -9,6 +9,8 @@ app_server <- function( input, output, session ) {
 
   mod_reactable_server("reactable_ui_1")
   mod_leaflet_server("leaflet_ui_1")
-
+  mod_plotly_server("plotly_ui_1")
+  mod_echarts_server("echarts_ui_1")
+  mod_tippy_server("tippy_ui_1")
 
 }

@@ -22,6 +22,21 @@ app_ui <- function(request) {
             "leaflet",
             tabName  = "leaflet",
             icon = icon("map")
+          ),
+          bs4Dash::bs4SidebarMenuItem(
+            "plotly",
+            tabName  = "plotly",
+            icon = icon("line-chart")
+          ),
+          bs4Dash::bs4SidebarMenuItem(
+            "echarts",
+            tabName  = "echarts",
+            icon = icon("bar-chart")
+          ),
+          bs4Dash::bs4SidebarMenuItem(
+            "tippy",
+            tabName  = "tippy",
+            icon = icon("letter")
           )
         )
       ),
@@ -34,7 +49,28 @@ app_ui <- function(request) {
           bs4Dash::bs4TabItem(
             tabName = "leaflet",
             mod_leaflet_ui("leaflet_ui_1")
+          ),
+          bs4Dash::bs4TabItem(
+            tabName = "plotly",
+            mod_plotly_ui("plotly_ui_1")
+          ),
+          bs4Dash::bs4TabItem(
+            tabName = "echarts",
+            mod_echarts_ui("echarts_ui_1")
+          ),
+          bs4Dash::bs4TabItem(
+            tabName = "tippy",
+            mod_tippy_ui("tippy_ui_1")
           )
+        ),
+        tags$script(
+          src = "https://unpkg.com/@popperjs/core@2"
+        ),
+        tags$script(
+          src = "https://unpkg.com/tippy.js@6"
+        ),
+        tags$script(
+          src = "www/tooltip.js"
         )
       )
     )
@@ -57,10 +93,10 @@ golem_add_external_resources <- function(){
 
   tags$head(
     favicon(),
-    bundle_resources(
-      path = app_sys('app/www'),
-      app_title = 'appEventos'
-    )
+    # bundle_resources(
+    #   path = app_sys('app/www'),
+    #   app_title = 'appEventos'
+    # )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()
   )
