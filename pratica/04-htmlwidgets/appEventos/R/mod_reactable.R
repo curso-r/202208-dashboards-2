@@ -22,7 +22,7 @@ mod_reactable_ui <- function(id){
             selectInput(
               ns("ano"),
               label = "Selecione um ano",
-              choices = unique(pnud$ano),
+              choices = c(1991, 2000, 2010),
               width = "90%"
             )
           ),
@@ -60,17 +60,20 @@ mod_reactable_ui <- function(id){
 #' reactable Server Functions
 #'
 #' @noRd
-mod_reactable_server <- function(id){
+mod_reactable_server <- function(id, tbl_pnud) {
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
     pnud_top10 <- reactive({
-      pnud |>
+      input_ano <- input$ano
+      input_metrica <- input$metrica
+      tbl_pnud |>
         dplyr::filter(
-          ano == input$ano
+          ano == input_ano
         ) |>
-        dplyr::arrange(dplyr::desc(.data[[input$metrica]])) |>
-        dplyr::slice(1:10)
+        dplyr::arrange(dplyr::desc(.data[[input_metrica]])) |>
+        head(n = 10) |>
+        dplyr::collect()
     })
 
     output$tabela <- reactable::renderReactable({

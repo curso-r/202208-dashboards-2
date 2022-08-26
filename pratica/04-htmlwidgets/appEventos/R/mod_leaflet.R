@@ -22,7 +22,7 @@ mod_leaflet_ui <- function(id){
             selectInput(
               ns("ano"),
               label = "Selecione um ano",
-              choices = unique(pnud$ano),
+              choices = c(1991, 2000, 2010),
               width = "90%"
             )
           ),
@@ -60,17 +60,20 @@ mod_leaflet_ui <- function(id){
 #' leaflet Server Functions
 #'
 #' @noRd
-mod_leaflet_server <- function(id){
+mod_leaflet_server <- function(id, tbl_pnud) {
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
     output$mapa <- leaflet::renderLeaflet({
-      tab_mapa <- pnud |>
-        dplyr::filter(ano == input$ano) |>
+      input_ano <- input$ano
+      input_metrica <- input$metrica
+      tab_mapa <- tbl_pnud |>
+        dplyr::filter(ano == input_ano) |>
         dplyr::group_by(uf_sigla) |>
         dplyr::summarise(
-          media = mean(.data[[input$metrica]], na.rm = TRUE)
+          media = mean(.data[[input_metrica]], na.rm = TRUE)
         ) |>
+        dplyr::collect() |>
         dplyr::left_join(
           geo_estados,
           by = c("uf_sigla" = "abbrev_state")
@@ -105,16 +108,19 @@ mod_leaflet_server <- function(id){
     output$tabela <- reactable::renderReactable({
 
       estado <- input$mapa_shape_click$id
+      input_ano <- input$ano
+      input_metrica <- input$metrica
 
       if (is.null(estado)) {
         estado <- "RJ"
       }
 
-      pnud |>
-        dplyr::filter(uf_sigla == estado, ano == input$ano) |>
-        dplyr::arrange(dplyr::desc(.data[[input$metrica]])) |>
-        dplyr::slice(1:10) |>
-        dplyr::select(muni_nm, one_of(input$metrica), espvida, idhm, rdpc, gini) |>
+      tbl_pnud |>
+        dplyr::filter(uf_sigla == estado, ano == input_ano) |>
+        dplyr::arrange(dplyr::desc(.data[[input_metrica]])) |>
+        head(n = 10) |>
+        dplyr::select(muni_nm, one_of(input_metrica), espvida, idhm, rdpc, gini) |>
+        dplyr::collect() |>
         reactable::reactable()
 
     })

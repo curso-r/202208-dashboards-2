@@ -1,0 +1,66 @@
+---
+title: "Pokemon"
+params:
+  pokemon: "bulbasaur"
+  cor: "black"
+output: 
+  pagedreport::paged_windmill:
+    front_img: "capa.jpg"
+    img_to_dark: FALSE
+    logo_to_white: TRUE
+# knit: pagedown::chrome_print
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+dados <- readr::read_rds("pkmn.rds")
+
+pkmn <- params$pokemon
+id <- dados |>
+  dplyr::filter(pokemon == pkmn) |>
+  dplyr::pull(id) |>
+  stringr::str_pad(width = 3, side = "left", pad = "0")
+imagem <- glue::glue(
+  "https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/{id}.png"
+)
+```
+
+
+---
+subtitle: "`r params$pokemon`"
+main-color: "`r params$cor`"
+---
+
+# `r pkmn` {-}
+
+<center>
+```{r}
+knitr::include_graphics(imagem)
+```
+</center>
+
+```{r}
+dados |> 
+  dplyr::filter(pokemon == pkmn) |> 
+  dplyr::select(
+    HP = hp,
+    ATK = ataque,
+    DEF = defesa,
+    VEL = velocidade,
+    `ATK ESP` = ataque_especial,
+    `DEF ESP` = defesa_especial
+  ) |> 
+  reactable::reactable()
+```
+
+
+<div style = "display: none;">
+$$
+1
+$$
+</div>
+
+

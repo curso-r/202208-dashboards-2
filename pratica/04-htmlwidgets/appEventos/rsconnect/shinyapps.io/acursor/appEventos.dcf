@@ -1,0 +1,14 @@
+name: appEventos
+title: appEventos
+username:
+account: acursor
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6851553
+bundleId: 6238819
+url: https://acursor.shinyapps.io/appEventos/
+when: 1661469673.27348
+lastSyncTime: 1661469673.27348
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data-raw/geo_estados.R|data-raw/geo_estados.rds|data-raw/pnud.R|data-raw/pnud_min.rds

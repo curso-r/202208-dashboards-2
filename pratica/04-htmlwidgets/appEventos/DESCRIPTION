@@ -9,9 +9,21 @@ Authors@R:
 Description: What the package does (one paragraph).
 License: What license is it under?
 Imports: 
+    bs4Dash,
     config (>= 0.3.1),
+    dplyr,
+    echarts4r,
+    ggplot2,
+    glue,
     golem (>= 0.3.1),
-    shiny (>= 1.7.1)
+    htmlwidgets,
+    leaflet,
+    pkgload,
+    plotly,
+    reactable,
+    sf,
+    shiny (>= 1.7.1),
+    tibble
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

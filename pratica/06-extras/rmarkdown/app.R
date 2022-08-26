@@ -44,6 +44,35 @@ server <- function(input, output, session) {
     filename = "relatorio.pdf",
     content = function(file) {
 
+      arquivo_html <- tempfile(
+        fileext = ".html"
+      )
+
+      cor <- dados$cor_1[dados$pokemon == input$pokemon]
+
+      withProgress(message = "Renderizando o html", {
+
+        incProgress(0.2)
+
+        rmarkdown::render(
+          input = "template_relatorio.Rmd",
+          output_file = arquivo_html,
+          params = list(pokemon = input$pokemon, cor = cor)
+        )
+
+        incProgress(0.5, message = "Renderizando o PDF...")
+
+        pagedown::chrome_print(
+          input = arquivo_html,
+          output = file
+        )
+
+        incProgress(0.3)
+
+      })
+
+
+
     }
   )
 

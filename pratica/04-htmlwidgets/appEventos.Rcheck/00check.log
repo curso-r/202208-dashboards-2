@@ -1,0 +1,176 @@
+* using log directory 'C:/Users/willi/Documents/curso-r/202208-dashboards-2/pratica/04-htmlwidgets/appEventos.Rcheck'
+* using R version 4.1.3 (2022-03-10)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* using options '--no-manual --as-cran'
+* checking for file 'appEventos/DESCRIPTION' ... OK
+* this is package 'appEventos' version '0.0.0.9000'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking serialization versions ... OK
+* checking whether package 'appEventos' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  What license is it under?
+Standardizable: FALSE
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... WARNING
+Found the following files with non-ASCII characters:
+  mod_echarts.R
+  mod_leaflet.R
+  mod_reactable.R
+  mod_tippy.R
+Portable packages must use only ASCII characters in their R code,
+except perhaps in comments.
+Use \uxxxx escapes for other characters.
+* checking R files for syntax errors ... ERROR
+Error in file 'R/mod_tippy.R':
+  /Users/willi/Documents/curso-r/202208-dashboards-2/pratica/04-htmlwidgets/appEventos.Rcheck/00_pkg_src/appEventos/R/mod_tip:117:16: unexpected input
+  116:         dplyr::select(
+  117:           MunicÃ
+                      ^
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... WARNING
+'::' or ':::' imports not declared from:
+  'bs4Dash' 'dplyr' 'echarts4r' 'ggplot2' 'glue' 'htmlwidgets'
+  'leaflet' 'plotly' 'reactable' 'sf' 'tibble' 'tidyr' 'viridis'
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+mod_echarts_server : <anonymous>: no visible binding for global
+  variable 'pnud'
+mod_echarts_server : <anonymous>: no visible binding for global
+  variable 'ano'
+mod_echarts_server : <anonymous>: no visible binding for global
+  variable 'uf_sigla'
+mod_echarts_server : <anonymous>: no visible binding for global
+  variable '.data'
+mod_echarts_server : <anonymous>: no visible binding for global
+  variable 'media'
+mod_echarts_ui: no visible binding for global variable 'pnud'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'pnud'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'ano'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'uf_sigla'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable '.data'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'geo_estados'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'muni_nm'
+mod_leaflet_server : <anonymous>: no visible global function definition
+  for 'one_of'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'espvida'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'idhm'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'rdpc'
+mod_leaflet_server : <anonymous>: no visible binding for global
+  variable 'gini'
+mod_leaflet_ui: no visible binding for global variable 'pnud'
+mod_plotly_server : <anonymous>: no visible binding for global variable
+  'pnud'
+mod_plotly_server : <anonymous>: no visible binding for global variable
+  'ano'
+mod_plotly_server : <anonymous>: no visible binding for global variable
+  'rdpc'
+mod_plotly_server : <anonymous>: no visible binding for global variable
+  'espvida'
+mod_plotly_server : <anonymous>: no visible binding for global variable
+  'muni_nm'
+mod_plotly_server : <anonymous>: no visible binding for global variable
+  'idhm'
+mod_plotly_server : <anonymous>: no visible binding for global variable
+  'gini'
+mod_plotly_ui: no visible binding for global variable 'pnud'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable 'pnud'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable 'ano'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable '.data'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable 'muni_nm'
+mod_reactable_server : <anonymous>: no visible global function
+  definition for 'one_of'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable 'espvida'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable 'idhm'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable 'rdpc'
+mod_reactable_server : <anonymous>: no visible binding for global
+  variable 'gini'
+mod_reactable_ui: no visible binding for global variable 'pnud'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'pnud'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'regiao_nm'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'uf_sigla'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'muni_nm'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'muni_id'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'ano'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'pop'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'idhm'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'espvida'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'rdpc'
+mod_tippy_server : <anonymous>: no visible binding for global variable
+  'gini'
+mod_tippy_ui: no visible binding for global variable 'pnud'
+Undefined global functions or variables:
+  .data ano espvida geo_estados gini idhm media muni_id muni_nm one_of
+  pnud pop rdpc regiao_nm uf_sigla
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Objetos de código não documentados:
+  'geo_estados' 'pnud'
+Conjunto de dados não documentados:
+  'geo_estados' 'pnud'
+All user-level objects in a package should have documentation entries.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of 'data' directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... NONE
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 4 WARNINGs, 1 NOTE
